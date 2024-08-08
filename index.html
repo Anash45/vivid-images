@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vivid Images</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="top-bar">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center montserrat tb-left-links">
+                            <a href="#" class="text-white fs-17 d-flex px-lg-3 px-3 ps-0 align-items-center gap-1"
+                                onclick="openLoginPopup()"><i class="fa fa-unlock fs-15"></i><span
+                                    class="ms-sm-2 ms-0 d-lg-inline d-md-none d-inline">Log In</span></a>
+                            <a href="#" class="text-white fs-17 d-flex px-lg-3 px-2 align-items-center gap-1"><i
+                                    class="fa fa-pencil fs-15"></i><span
+                                    class="ms-sm-2 ms-0 d-lg-inline d-md-none d-inline">Sign Up</span></a>
+                            <a href="#" class="text-white fs-17 d-flex px-lg-3 px-2 align-items-center gap-1"><span
+                                    class="me-sm-1 me-0 d-lg-inline d-md-none d-inline">Connect with</span><i
+                                    class="fa-brands fa-facebook-square fs-15"></i></a>
+                        </div>
+                        <img src="./assets/images/closed.png" onclick="openSalePopup()" alt="Status"
+                            class="shop-status">
+                        <div class="d-md-flex d-none align-items-center montserrat tb-right-links">
+                            <a href="#" class="text-white fs-17 d-flex px-3 ps-0 align-items-center gap-1"><span
+                                    class="ms-2">Credit</span></a>
+                            <a href="#" class="text-white fs-17 d-flex px-3 align-items-center gap-1"><span
+                                    class="ms-2">Affiliates</span></a>
+                            <a href="#" class="text-white fs-17 d-flex px-3 align-items-center gap-1"><span
+                                    class="me-1">Corporate</span></i></a>
+                            <a href="#" class="text-white fs-17 d-flex px-3 align-items-center gap-1"><span
+                                    class="me-1">Reseller</span></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-xl navbar-light bg-white">
+                <div class="container flex-column">
+                    <div class="d-flex justify-content-between align-items-center w-100 py-2">
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="./assets/images/Logo.png" alt="Logo" class="h-logo">
+                        </a>
+                        <div class="h-search d-xl-block d-none">
+                            <input type="search" class="form-control fs-21" placeholder="Search">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="d-flex align-items-center gap-lg-5 gap-4">
+                            <a href="#" class="d-xl-flex d-none align-items-center gap-2 h-customer-support">
+                                <img src="./assets/images/customer-support.png" alt="CS">
+                                <div class="d-flex flex-column gap-1">
+                                    <span class="fw-bold fs-20 hcs-title">Contact us for help</span>
+                                    <span class="roboto-condensed hcs-number">225.354.0856</span>
+                                </div>
+                            </a>
+                            <div class="cart">
+                                <div class="position-relative cart-icon" onclick="openCartPopup()">
+                                    <span class="cart-count"><span>2</span></span>
+                                    <img src="./assets/images/cart.png" alt="Cart" class="h-cart-icon">
+                                </div>
+                                <div class="cart-container montserrat">
+                                    <div class="d-flex flex-column gap-3">
+                                        <div class="cart-items d-flex gap-2 flex-column">
+                                            <div class="cart-item d-flex gap-2 justify-content-between">
+                                                <img src="./assets/images/product-popup-img.png" alt="Image"
+                                                    class="ci-img">
+                                                <div class="d-flex flex-column gap-2 py-2">
+                                                    <span class="fs-14 text-dark fw-semibold lh-1 ci-name">Postcard
+                                                        Cards</span>
+                                                    <span class="fs-14 text-dark fw-semibold lh-1 ci-price">1 x $
+                                                        10.09</span>
+                                                </div>
+                                                <span class="cursor-pointer">
+                                                    <i class="fa fa-circle-xmark primary fs-14"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <table class="table arimo text-dark text-end table-borderless mb-0">
+                                            <tr>
+                                                <td class="py-1">
+                                                    <span class="text-italic">Sub-Total</span>
+                                                </td>
+                                                <td class="py-1"> $ 10.09 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-1">
+                                                    <span class="text-italic">Eco Tax (-2.00)</span>
+                                                </td>
+                                                <td class="py-1"> $ 2.00 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="py-1">
+                                                    <span class="text-italic">VAT (20%)</span>
+                                                </td>
+                                                <td class="py-1"> $ 6.90 </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="py-1">
+                                                    <span class="primary">Total</span>
+                                                </th>
+                                                <td class="py-1 fw-bold primary"> $ 6.90 </td>
+                                            </tr>
+                                        </table>
+                                        <div class="cart-btns arimo d-flex gap-2 justify-content-between">
+                                            <a href="#" class="btn view-cart-btn fs-14">VIEW CART</a>
+                                            <a href="#" class="btn checkout-btn fs-14">CHEKOUT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav py-xl-3 py-3 montserrat justify-content-between">
+                            <li class="nav-item py-xl-0 py-2">
+                                <div class="h-search d-xl-none d-block">
+                                    <input type="search" class="form-control fs-21" placeholder="Search">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2 dropdown">
+                                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"><span
+                                        class="d-xl-block">All</span> <span class="d-xl-block">Products</span> <i class="fa fa-chevron-down d-xl-none d-inline"></i></a>
+                                <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="container-fluid arimo">
+                                        <div class="row gap-xl-0 gap-4">
+                                            <div class="col-xl-5">
+                                                <div class="mb-4">
+                                                    <h5 class="fw-normal primary mb-4 fs-14">Most Popular</h5>
+                                                    <div class="d-flex flex-column gap-3">
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Business
+                                                                Card</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Premium Business
+                                                                Card</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Free Business
+                                                                Card</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Marketing
+                                                                Materials</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Dance Marketing
+                                                                Kit</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap primary ps-4">View
+                                                            All<i class="fa fa-chevron-right"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-0">
+                                                    <h5 class="fw-normal primary mb-4 fs-14">Categories</h5>
+                                                    <div class="d-flex flex-column gap-3">
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Calendar</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Banner &
+                                                                Signs</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Marketing
+                                                                Materials</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Business
+                                                                Stationery & Forms</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                class="fa fa-chevron-right"></i><span>Direct Mail &
+                                                                Mailing Service</span></a>
+                                                        <a href="#"
+                                                            class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap primary ps-4">View
+                                                            All<i class="fa fa-chevron-right"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-7 d-flex flex-column justify-content-between">
+                                                <div class="row gap-xl-0 gap-4">
+                                                    <div class="col-xl-6">
+                                                        <div class="mb-0">
+                                                            <h5 class="fw-normal primary mb-4 fs-14">Calendar</h5>
+                                                            <div class="d-flex flex-column gap-3">
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Marketing
+                                                                        Materials</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Dance
+                                                                        Marketing Kit</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Event
+                                                                        Marketing Kit</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Marketing's
+                                                                        Card</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Flyers
+                                                                        Print</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Flyers
+                                                                        Product</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>The Flyers
+                                                                        Printing</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="mb-0">
+                                                            <h5 class="fw-normal primary mb-4 fs-14 opacity-0 d-xl-block d-none">Calendar</h5>
+                                                            <div class="d-flex flex-column gap-3">
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>The Flyers Three Page</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Flyers Two Page</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Brochures</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Brochures Cafe</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Brochure's Idea Design</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Brochure's Food</span></a>
+                                                                <a href="#"
+                                                                    class="d-flex nd-link align-items-center gap-3 fs-14 text-nowrap text-dark"><i
+                                                                        class="fa fa-chevron-right"></i><span>Six Panels Brochures</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/images/dropdown-menu.png" alt="Drop" class="drop-img d-xl-block d-none">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a class="nav-link" href="#">Business cards </a>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a class="nav-link" href="#">Flyers & postcards </a>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a class="nav-link" href="#">booklets & brochures </a>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a class="nav-link" href="#">labels & stickers </a>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a class="nav-link" href="#">SIGNS & BANNERS </a>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a class="nav-link" href="#">vehicle wraps </a>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a class="nav-link" href="#">design services </a>
+                            </li>
+                            <li class="nav-item py-xl-0 py-2">
+                                <a href="#"
+                                    class="d-flex d-xl-none align-items-center justify-content-center gap-2 h-customer-support">
+                                    <img src="./assets/images/customer-support.png" alt="CS">
+                                    <div class="d-flex flex-column gap-1">
+                                        <span class="fw-bold fs-20 hcs-title">Contact us for help</span>
+                                        <span class="roboto-condensed hcs-number">225.354.0856</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="hero mb-4">
+            <div class="slick-carousel hero-slider">
+                <div class="carousel-item d-flex justify-content-between"
+                    style="background-image: url(./assets/images/slide-1.png);">
+                    <div class="container">
+                        <div class="carousel-text">
+                            <h2 class="ct-title roboto-condensed mb-0"><span class="primary fw-bold">Flyers </span><span
+                                    class="fw-light">& Postcards</span></h2>
+                            <p class="ct-desc">Our A5 flyers and leaflets are our bestselling size. This is because
+                                they're perfect for potential prospects to carry around and are extremely cost
+                                effective. We currently have an offer of 1000 flyers and leaflets for only £24! </p>
+                            <a href="#" class="btn btn-outline-primary ct-btn mb-0">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item d-flex justify-content-between"
+                    style="background-image: url(./assets/images/slide-1.png);">
+                    <div class="container">
+                        <div class="carousel-text">
+                            <h2 class="ct-title roboto-condensed mb-0"><span class="primary fw-bold">Flyers </span><span
+                                    class="fw-light">& Postcards</span></h2>
+                            <p class="ct-desc">Our A5 flyers and leaflets are our bestselling size. This is because
+                                they're perfect for potential prospects to carry around and are extremely cost
+                                effective. We currently have an offer of 1000 flyers and leaflets for only £24! </p>
+                            <a href="#" class="btn btn-outline-primary ct-btn mb-0">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item d-flex justify-content-between"
+                    style="background-image: url(./assets/images/slide-1.png);">
+                    <div class="container">
+                        <div class="carousel-text">
+                            <h2 class="ct-title roboto-condensed mb-0"><span class="primary fw-bold">Flyers </span><span
+                                    class="fw-light">& Postcards</span></h2>
+                            <p class="ct-desc">Our A5 flyers and leaflets are our bestselling size. This is because
+                                they're perfect for potential prospects to carry around and are extremely cost
+                                effective. We currently have an offer of 1000 flyers and leaflets for only £24! </p>
+                            <a href="#" class="btn btn-outline-primary ct-btn mb-0">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-4 my-1">
+            <div class="container">
+                <h2 class="sec-title text-uppercase mb-3"> Featured Products </h2>
+                <div class="sec-separator mb-4">
+                    <div class="star-eclipse mx-auto">
+                        <i class="fa fa-star primary"></i>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap featured-cards justify-content-center">
+                    <div class="fp-card">
+                        <span class="lower-price-tag"> New Lower Price </span>
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Stickers</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Labels</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Flyers</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Post Cards</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Business Cards</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Brochures</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Posters</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Hang Tags</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Vinyl Banners</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="fp-card">
+                        <img src="./assets/images/fp-1.png" class="mt-2" alt="FP">
+                        <h4 class="fp-title">Booklets</h4>
+                        <div class="shop-overlay">
+                            <button class="btn btn-warning shop-btn">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-4 my-2">
+            <div class="container">
+                <h2 class="sec-title text-uppercase mb-3"> Affiliate Programs </h2>
+                <div class="sec-separator mb-4">
+                    <div class="star-eclipse mx-auto">
+                        <i class="fa fa-star primary"></i>
+                    </div>
+                </div>
+                <div class="overflow-auto">
+                    <ul class="list-group filter-btns">
+                        <li class="list-group-item active"><a href="#" class="filter-link active" data-filter="all">All
+                                Projects</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="filter-link"
+                                data-filter="Leaflets & Flyers">Leaflets & Flyers</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="filter-link" data-filter="Logo">Logo</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="filter-link"
+                                data-filter="Stationary">Stationary</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="filter-link" data-filter="3d product">3d
+                                product</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="filter-link"
+                                data-filter="Presentation">Presentation</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="filter-link" data-filter="Brochure">Brochure</a>
+                        </li>
+                        <li class="list-group-item"><a href="#" class="filter-link"
+                                data-filter="Ecommerce">Ecommerce</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="items-container designs-slider mt-4 pt-3">
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item roboto" data-category="Leaflets & Flyers">
+                        <img src="./assets/images/product-3.png" alt="Product" class="item-img">
+                        <div class="item-content p-2">
+                            <div class="d-flex gap-2">
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-heart"></i>
+                                    <span>Favorite</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center item-btn">
+                                    <i class="fa fa-eye"></i>
+                                    <span>Preview</span>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mt-3">
+                                <div class="d-flex justify-content-between">
+                                    <span class="item-name w-50 fs-20" style="color: #444444;">New Years Eve</span>
+                                    <div class="d-flex justify-content-end w-50 align-items-center stars">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between w-50">
+                                        <span class="fs-20 primary">$15</span>
+                                        <span class="fs-20" style="color:#444444;">PF1022</span>
+                                    </div>
+                                    <span class="fs-20 w-50 text-end" style="color: #6c6c6c;"> PSD Design </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-4 my-1">
+            <div class="container">
+                <h2 class="sec-title text-uppercase mb-3"> Affiliate Programs </h2>
+                <div class="sec-separator mb-4">
+                    <div class="star-eclipse mx-auto">
+                        <i class="fa fa-star primary"></i>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap affiliate-programs justify-content-center">
+                    <div class="ap-card">
+                        <img src="./assets/images/image-3.png" alt="Affiliate Program" class="img-fluid w-100">
+                        <div class="d-flex align-items-center flex-column text-center px-4 fs-14">
+                            <p class="fw-bold ap-title mb-2">referrals</p>
+                            <span class="ap-desc">Earn commission by telling others about Vivid Images.</span>
+                        </div>
+                        <a href="#" class="btn ct-btn fw-bold">SIGN UP</a>
+                    </div>
+                    <div class="ap-card">
+                        <img src="./assets/images/image-2.png" alt="Affiliate Program" class="img-fluid w-100">
+                        <div class="d-flex align-items-center flex-column text-center px-4 fs-14">
+                            <p class="fw-bold ap-title mb-2">wholeseller</p>
+                            <span class="ap-desc">Received discounted rates based on sales volume. </span>
+                        </div>
+                        <a href="#" class="btn ct-btn fw-bold">SIGN UP</a>
+                    </div>
+                    <div class="ap-card">
+                        <img src="./assets/images/image-1.png" alt="Affiliate Program" class="img-fluid w-100">
+                        <div class="d-flex align-items-center flex-column text-center px-4 fs-14">
+                            <p class="fw-bold ap-title mb-2">corporate</p>
+                            <span class="ap-desc">Create a portal for your staff to order your branded products. </span>
+                        </div>
+                        <a href="#" class="btn ct-btn fw-bold">SIGN UP</a>
+                    </div>
+                    <div class="ap-card">
+                        <img src="./assets/images/image.png" alt="Affiliate Program" class="img-fluid w-100">
+                        <div class="d-flex align-items-center flex-column text-center px-4 fs-14">
+                            <p class="fw-bold ap-title mb-2">reseller</p>
+                            <span class="ap-desc">White label our website to serve your clients with your branding.
+                            </span>
+                        </div>
+                        <a href="#" class="btn ct-btn fw-bold">SIGN UP</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-4 my-2">
+            <div class="container">
+                <div class="d-flex flex-column align-items-center justify-content-center owner-intro roboto">
+                    <div class="owner-img">
+                        <img src="./assets/images/DavidWard_2015R.png" alt="Owner">
+                    </div>
+                    <div class="d-flex align-items-center flex-column text-center px-4 fs-14">
+                        <h2 class="sec-title mb-1">Jason of Vivid</h2>
+                        <p class="owner-desc fs-16 mb-0">Owner</p>
+                    </div>
+                    <p class="mb-0 text-center px-lg-5 owner-desc fs-18"> Let's set up a consultation to discuss the
+                        most common mistakes in printing, such as print resolution and deminisons with bleed. We can
+                        also discuss recommended products, materials and services which best suit your event, business
+                        or campaign. </p>
+                    <a href="#" class="btn ct-btn fw-bold">Let's Talk about it</a>
+                </div>
+            </div>
+        </section>
+        <footer class="pt-4 mt-1 arimo">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="mb-4 pb-xl-2 pb-0">
+                                <h4 class="f-title fw-normal primary fs-16 mb-0">About Us</h4>
+                            </div>
+                            <img src="./assets/images/Logo-footer.png" alt="Abc" height="50" class="img-fluid">
+                            <div class="my-4 py-2 d-flex flex-column gap-1">
+                                <a href="#" class="d-flex fs-12 f-link align-items-center gap-2">
+                                    <i class="fa fa-home"></i>
+                                    <span>2167 Beaumont Drive Baton Rouge, LA 70806 </span>
+                                </a>
+                                <a href="#" class="d-flex fs-12 f-link align-items-center gap-2">
+                                    <i class="fa fa-phone"></i>
+                                    <span>225.354.0856</span>
+                                </a>
+                                <a href="mailto:services@vividimages.com"
+                                    class="d-flex fs-12 f-link align-items-center gap-2">
+                                    <i class="fa fa-envelope"></i>
+                                    <span>services@vividimages.com</span>
+                                </a>
+                            </div>
+                            <div
+                                class="my-4 py-2 d-flex align-items-center gap-3 justify-content-md-start justify-content-center">
+                                <a href="#" class="d-flex fs-12 f-social-link align-items-center gap-2">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="d-flex fs-12 f-social-link align-items-center gap-2">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="mailto:services@vividimages.com"
+                                    class="d-flex fs-12 f-social-link align-items-center gap-2">
+                                    <i class="fa-brands fa-google-plus-g"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9">
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <div class="mb-4 pb-xl-2 pb-0">
+                                        <h4 class="f-title fw-normal primary fs-16 mb-0">Corporate</h4>
+                                    </div>
+                                    <div class="d-flex flex-column gap-1">
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>About</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Green</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Affiliates</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Non-profits & Gevernment</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Terms of Service</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Privacy Policy</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 mt-xl-0 mt-5">
+                                    <div class="mb-4 pb-xl-2 pb-0">
+                                        <h4 class="f-title fw-normal primary fs-16 mb-0">Support</h4>
+                                    </div>
+                                    <div class="d-flex flex-column gap-1">
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>My Account</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Design Guide</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>FAQ</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Design Services</span>
+                                        </a>
+                                        <a href="#" class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span>Contact Us</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 mt-xl-0 mt-5">
+                                    <div class="mb-4 pb-xl-2 pb-0">
+                                        <h4 class="f-title fw-normal primary fs-16 mb-0">Other Info</h4>
+                                    </div>
+                                    <p class="fs-14 mb-4"> Vivid Images provides fast online printing for both personal
+                                        and business use. We provide high quality business cards, postcards, flyers,
+                                        brochures, booklets, signs, banners, stickers, labels, vechile wraps, desgins
+                                        and more! </p>
+                                    <div
+                                        class="d-flex align-items-center gap-2 pt-2 justify-content-md-start justify-content-center">
+                                        <img src="./assets/images/paypal.png" alt="Payment" class="payment-method-img">
+                                        <img src="./assets/images/mastercard.png" alt="Payment"
+                                            class="payment-method-img">
+                                        <img src="./assets/images/visa.png" alt="Payment" class="payment-method-img">
+                                        <img src="./assets/images/amex.png" alt="Payment" class="payment-method-img">
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 mt-xl-0 mt-5">
+                                    <div class="mb-4 pb-xl-2 pb-0">
+                                        <h4 class="f-title fw-normal primary fs-16 mb-0">Subsdiary Companies</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="d-flex flex-column gap-1">
+                                                <a href="#"
+                                                    class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                                    <i class="fa fa-chevron-right"></i>
+                                                    <span>Geaux Kids</span>
+                                                </a>
+                                                <a href="#"
+                                                    class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                                    <i class="fa fa-chevron-right"></i>
+                                                    <span>Kreative Space</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="d-flex flex-column gap-1">
+                                                <a href="#"
+                                                    class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                                    <i class="fa fa-chevron-right"></i>
+                                                    <span>Vivid Memories</span>
+                                                </a>
+                                                <a href="#"
+                                                    class="d-flex fs-14 f-link f-chev-link align-items-center gap-2">
+                                                    <i class="fa fa-chevron-right"></i>
+                                                    <span>Vivid Track</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 mt-xl-0 mt-5">
+                                    <div class="mb-4 pb-xl-2 pb-0">
+                                        <h4 class="f-title fw-normal primary fs-16 mb-0"><span
+                                                class=" opacity-0">Subsdiary Companies</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="mb-0">Vivid Images - Copyright © 2024 <a href="#" class="primary">VividImages.com</a> .
+                        All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Modal Structure -->
+        <div class="modal fade sale-popup" id="salePopup" tabindex="-1" aria-labelledby="salePopupLabel"
+            aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered">
+                <div class="modal-content">
+                    <img src="./assets/images/border.svg" alt="Border" height="11" class="w-100">
+                    <img src="./assets/images/sale-close.png" alt="Icon" class="sale-close" data-bs-dismiss="modal">
+                    <div class="modal-body roboto">
+                        <div class="text-center py-3">
+                            <h2 class="fs-28 fw-medium text-dark">Ends soon: 40% off all signs and posters </h2>
+                            <p class="text-dark fw-light fs-24">Check out our expanded collection </p>
+                        </div>
+                        <form class="col-sm-9 mx-auto px-0">
+                            <div class="mb-2">
+                                <input type="email"
+                                    class="form-control rounded px-4 fs-14 sale-inp form-control-lg mb-1"
+                                    id="emailInput" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn sale-btn fw-light fs-18" id="emailInput">Show Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <img src="./assets/images/sale-popup.png" alt="Sale" class="img-fluid sale-img">
+                </div>
+            </div>
+        </div>
+        <div class="modal fade login-popup normal-popup" id="loginPopup" tabindex="-1" aria-labelledby="loginPopupLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content arimo">
+                    <div class="p-2">
+                        <div class="text-end">
+                            <i class="fa fa-circle-xmark text-dark fs-22 cursor-pointer" data-bs-dismiss="modal"></i>
+                        </div>
+                        <div class="text-center pb-3 text-dark">
+                            <h2 class="fw-bold fs-18 mb-0">LOG IN</h2>
+                        </div>
+                        <form class="col-sm-12 mx-auto px-2">
+                            <div class="mb-3">
+                                <label for="username" class="text-dark fs-14">Username</label>
+                                <input type="text" class="form-control rounded px-4 fs-14 sale-inp form-control-lg mb-1"
+                                    id="username" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="text-dark fs-14">Password</label>
+                                <input type="text" class="form-control rounded px-4 fs-14 sale-inp form-control-lg mb-1"
+                                    id="password" placeholder="">
+                            </div>
+                            <div class="py-2 d-flex align-items-center justify-content-between">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="remember" checked>
+                                    <label class="form-check-label fs-12 arimo" for="remember" style="color: #888888;">
+                                        Remember me </label>
+                                </div>
+                                <a href="#" class="text-dark fs-14 arimo" onclick="openForgotPasswordPopup()">Forgot
+                                    Password ?</a>
+                            </div>
+                            <div class="mt-2">
+                                <button class="btn login-btn fw-light fs-18">LOG IN</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-separator">
+                        <span class="ls-or text-dark">OR</span>
+                    </div>
+                    <div class="p-2">
+                        <div class="d-flex align-items-center justify-content-center login-methods gap-4 pb-3">
+                            <a href="#" class="login-method-btn login-fb"><i
+                                    class="fa-brands fa-facebook-f fs-16"></i></a>
+                            <a href="#" class="login-method-btn login-twitter"><i
+                                    class="fa-brands fa-twitter fs-16"></i></a>
+                            <a href="#" class="login-method-btn login-gplus"><i
+                                    class="fa-brands fa-google-plus-g fs-16"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade forgot-password-popup normal-popup" id="forgotPasswordPopup" tabindex="-1"
+            aria-labelledby="forgotPasswordLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content arimo">
+                    <div class="pt-2 px-3 pb-3">
+                        <div class="text-end">
+                            <i class="fa fa-circle-xmark text-dark fs-22 cursor-pointer" data-bs-dismiss="modal"></i>
+                        </div>
+                        <div class="text-center pb-3 text-dark">
+                            <h2 class="fw-bold fs-18 mb-0 text-uppercase">Forgot your password?</h2>
+                        </div>
+                        <form class="col-sm-12 mx-auto px-2">
+                            <div class="mb-3 fs-12 text-dark">
+                                <p class="mb-0">Please enter your email address below.</p>
+                                <p class="mb-0">You will receive a link to reset your password.</p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="text-dark fs-14">Email Address</label>
+                                <input type="email"
+                                    class="form-control rounded px-4 fs-14 sale-inp form-control-lg mb-1" id="email"
+                                    placeholder="">
+                            </div>
+                            <div class="py-3 d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center fs-14 text-dark gap-2 cursor-pointer"
+                                    onclick="goBackToLogin()">
+                                    <i class="fa fa-chevron-left"></i><span>BACK TO LOGIN</span>
+                                </div>
+                                <button class="btn forgot-btn"> SUBMIT </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="go-to-top" id="goToTop">
+            <i class="fa fa-chevron-up"></i>
+            <span>Top</span>
+        </div>
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+
+</html>
