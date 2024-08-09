@@ -190,3 +190,35 @@ function goBackToLogin() {
     closeForgotPasswordPopup();
     openLoginPopup();
 }
+
+function closeAllSubmenus(params) {
+    $('.sub-menu-cont').each(function () {
+        $(this).removeClass('opened-submenu');
+    })
+}
+
+
+
+$(document).click(function (event) {
+    $('.dropdown-menu').on('click', function (e) {
+        e.stopPropagation();
+    });
+
+    $('.sub-menu-link').each(function () {
+        $(this).on("mouseover click", function (e) {
+            e.preventDefault();
+            closeAllSubmenus();
+            var submenu = $(this).closest('.sub-menu-cont');
+            submenu.addClass('opened-submenu');
+        });
+    });
+
+    $('.nd-link').each(function () {
+        $(this).on("mouseover click", function (e) {
+            e.preventDefault();
+            if (!$(this).hasClass('sub-menu-link') && !$(this).closest('.sub-menu').length) {
+                closeAllSubmenus();
+            }
+        })
+    });
+})
